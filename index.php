@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+
 if(array_key_exists("waifu" , $_GET)){
 	$waifu = htmlspecialchars($_GET["waifu"]);
 	if(waifu_exists){
