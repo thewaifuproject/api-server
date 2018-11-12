@@ -3,7 +3,7 @@
 function getWaifu($connexio, $waifuId){
 	try{
 	
-		$SQL = "SELECT * FROM waifus WHERE id = ':waifuId'";
+		$SQL = "SELECT * FROM waifus WHERE id = :waifuId";
 		$consulta = $connexio->prepare($SQL);
 		$consulta->bindParam(":waifuId", $waifuId, PDO::PARAM_INT);
 		$consulta->execute();
